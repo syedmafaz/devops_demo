@@ -3,7 +3,7 @@ import 'package:devops_demo/resources/texts/strings.dart';
 
 final ButtonStyle elevatedButtonStyle = ButtonStyle(
     backgroundColor:
-        MaterialStateProperty.all<Color>(Color.fromRGBO(58, 66, 86, 1.0)),
+        MaterialStateProperty.all<Color>(Color.fromRGBO(54, 15, 86, 1.0)),
     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(32.0),

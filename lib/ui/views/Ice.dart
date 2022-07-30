@@ -3,12 +3,12 @@ import 'package:devops_demo/database/dao/services.dart';
 import 'package:devops_demo/resources/texts/strings.dart';
 import 'package:devops_demo/ui/views/detail_page.dart';
 
-class Family extends StatefulWidget {
+class Ice extends StatefulWidget {
   @override
-  FamilyState createState() => FamilyState();
+  IceState createState() => IceState();
 }
 
-class FamilyState extends State<Family> {
+class IceState extends State<Ice> {
   late List services;
 
   @override
@@ -26,8 +26,8 @@ class FamilyState extends State<Family> {
             padding: EdgeInsets.only(right: 12.0),
             decoration: new BoxDecoration(
                 border: new Border(
-                    right: new BorderSide(width: 1.0, color: Colors.white24))),
-            child: Icon(Icons.auto_awesome, color: Colors.white),
+                    right: new BorderSide(width: 1.0, color: Colors.green))),
+            child: Icon(Icons.account_tree, color: Colors.white),
           ),
           title: Text(
             services.title,
@@ -41,14 +41,14 @@ class FamilyState extends State<Family> {
                   flex: 1,
                   child: Container(
                     child: LinearProgressIndicator(
-                        backgroundColor: Color.fromRGBO(209, 224, 224, 0.2),
+                        backgroundColor: Colors.black,
                         value: services.indicatorValue,
                         valueColor: AlwaysStoppedAnimation(Colors.green)),
                   )),
             ],
           ),
           trailing:
-              Icon(Icons.keyboard_arrow_right, color: Colors.white, size: 30.0),
+              Icon(Icons.accessibility_new_rounded, color: Colors.white, size: 30.0),
           onTap: () {
             Navigator.push(
                 context,
@@ -61,7 +61,7 @@ class FamilyState extends State<Family> {
           elevation: 8.0,
           margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
           child: Container(
-            decoration: BoxDecoration(color: Color.fromRGBO(64, 75, 96, .9)),
+            decoration: BoxDecoration(color: Colors.blue),
             child: makeListTile(services),
           ),
         );
@@ -79,7 +79,7 @@ class FamilyState extends State<Family> {
     );
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
+      backgroundColor: Colors.green,
       body: makeBody,
     );
   }
@@ -88,20 +88,24 @@ class FamilyState extends State<Family> {
 List getServices() {
   return [
     Services(
-      title: Strings.TITLE_MMM_MMM_REGISTRATION,
-      indicatorValue: 0.25,
+      title: Strings.TITLE_MM_TB_CCE,
+      indicatorValue: 0.95,
     ),
     Services(
-      title: Strings.TITLE_MMM_VARAN_VADHU_LIST,
+      title: Strings.TITLE_MM_TB_VCE,
       indicatorValue: 0.50,
     ),
     Services(
-      title: Strings.TITLE_MMM_VIEW_EDIT_DELETE_PROFILE,
-      indicatorValue: 0.75,
+      title: Strings.TITLE_MM_TB_SCE,
+      indicatorValue: 0.48,
     ),
     Services(
-      title: Strings.TITLE_MMM_LATEST_NEWS,
-      indicatorValue: 1.0,
+      title: Strings.TITLE_MM_TB_PCE,
+      indicatorValue: 0.38,
+    ),
+    Services(
+      title: Strings.TITLE_MM_TB_CCCE,
+      indicatorValue: 0.1,
     ),
   ];
 }
